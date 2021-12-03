@@ -20,4 +20,6 @@ public class Constants {
 	public static double shooterPercentage = 0.80;
 
 	public static final double shooterIncrement = 0.05;
+
+	public static final double shooterSmallIncrement = 0.025;
 }

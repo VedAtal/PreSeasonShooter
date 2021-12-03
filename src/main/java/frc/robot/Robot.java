@@ -159,6 +159,7 @@ public class Robot extends TimedRobot {
       throw t;
     }
 
+    //Xbox controller actions
     if(mDriveController.aButton.isBeingPressed())
     {
       mShooter.shoot();
@@ -169,19 +170,32 @@ public class Robot extends TimedRobot {
     }
     if(mDriveController.dpadUp.wasActivated())
     {
-      if(Constants.shooterPercentage > 0 && Constants.shooterPercentage < 1)
+      if(Constants.shooterPercentage >= 0 && (Constants.shooterPercentage + 0.05) <= 1)
       {
         Constants.shooterPercentage += Constants.shooterIncrement;
       }
     }
     if(mDriveController.dpadDown.wasActivated())
     {
-      if(Constants.shooterPercentage > 0 && Constants.shooterPercentage < 1)
+      if((Constants.shooterPercentage - 0.05) > 0 && Constants.shooterPercentage <= 1)
       {
         Constants.shooterPercentage -= Constants.shooterIncrement;
       }
     }
-    
+    if(mDriveController.dpadRight.wasActivated())
+    {
+      if(Constants.shooterPercentage => 0 && (Constants.shooterPercentage + 0.025) <= 1)
+      {
+        Constants.shooterPercentage += Constants.shooterSmallIncrement;
+      }
+    }
+    if(mDriveController.dpadLeft.wasActivated())
+    {
+      if((Constants.shooterPercentage - 0.025) = 0 && Constants.shooterPercentage <= 1)
+      {
+        Constants.shooterPercentage -= Constants.shooterSmallIncrement;
+      }
+    }
   }
 
   @Override
