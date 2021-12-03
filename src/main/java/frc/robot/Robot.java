@@ -173,6 +173,7 @@ public class Robot extends TimedRobot {
       if(Constants.shooterPercentage >= 0 && (Constants.shooterPercentage + 0.05) <= 1)
       {
         Constants.shooterPercentage += Constants.shooterIncrement;
+        Shooter.outputTelemetry();
       }
     }
     if(mDriveController.dpadDown.wasActivated())
@@ -180,6 +181,7 @@ public class Robot extends TimedRobot {
       if((Constants.shooterPercentage - 0.05) > 0 && Constants.shooterPercentage <= 1)
       {
         Constants.shooterPercentage -= Constants.shooterIncrement;
+        Shooter.outputTelemetry();
       }
     }
     if(mDriveController.dpadRight.wasActivated())
@@ -187,6 +189,7 @@ public class Robot extends TimedRobot {
       if(Constants.shooterPercentage => 0 && (Constants.shooterPercentage + 0.025) <= 1)
       {
         Constants.shooterPercentage += Constants.shooterSmallIncrement;
+        Shooter.outputTelemetry();
       }
     }
     if(mDriveController.dpadLeft.wasActivated())
@@ -194,6 +197,7 @@ public class Robot extends TimedRobot {
       if((Constants.shooterPercentage - 0.025) = 0 && Constants.shooterPercentage <= 1)
       {
         Constants.shooterPercentage -= Constants.shooterSmallIncrement;
+        Shooter.outputTelemetry();
       }
     }
   }

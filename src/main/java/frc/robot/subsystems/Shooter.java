@@ -51,7 +51,7 @@ public class Shooter extends Subsystem
 
 	public void outputTelemetry()
 	{
-
+		System.out.println("The motor is at: "+Constants.shooterPercentage*100+"%");
 	}
 
 	public boolean checkSystem()
