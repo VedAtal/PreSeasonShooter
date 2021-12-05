@@ -196,6 +196,10 @@ public class Robot extends TimedRobot {
         Constants.shooterPercentage -= Constants.shooterSmallIncrement;
       }
     }
+    if(mDriveController.leftBumper.wasActivated())
+    {
+      Constants.shooterPercentage = -0.5;
+    }
   }
 
   @Override
