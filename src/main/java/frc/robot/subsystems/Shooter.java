@@ -49,11 +49,6 @@ public class Shooter extends Subsystem
 		mShooterMotor.set(ControlMode.PercentOutput, Constants.shooterPercentage);
 	}
 
-	public void outputTelemetry()
-	{
-		System.out.println("The motor is at: "+Constants.shooterPercentage*100+"%");
-	}
-
 	public boolean checkSystem()
 	{
 		return false; 
@@ -64,4 +59,9 @@ public class Shooter extends Subsystem
 		mShooterMotor.set(ControlMode.PercentOutput, 0);
 	}
 
+	@Override
+	public void outputTelemetry()
+	{
+	
+	}
 }
