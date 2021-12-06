@@ -234,16 +234,16 @@ public class Xbox extends XboxController {
     public void update() {
         aButton.update();
         bButton.update();
-        xButton.update();
-        yButton.update();
-        startButton.update();
-        backButton.update();
+        // xButton.update();
+        // yButton.update();
+        // startButton.update();
+        // backButton.update();
         leftBumper.update();
         rightBumper.update();
-        leftJoystickButton.update();
-        rightJoystickButton.update();
-        leftTrigger.update();
-        rightTrigger.update();
+        // leftJoystickButton.update();
+        // rightJoystickButton.update();
+        // leftTrigger.update();
+        // rightTrigger.update();
         dpadUp.update();
         dpadRight.update();
         dpadDown.update();
