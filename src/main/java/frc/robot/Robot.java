@@ -162,43 +162,59 @@ public class Robot extends TimedRobot {
     //Xbox controller actions
     if(mDriveController.aButton.isBeingPressed())
     {
+      System.out.println("Shoot");
       mShooter.shoot();
     }
     if(mDriveController.bButton.wasActivated())
     {
+      System.out.println("Stop");
       mShooter.stop();
     }
     if(mDriveController.dpadUp.wasActivated())
     {
-      if((Constants.shooterPercentage + 0.05) <= 1)
+      if((Constants.shooterPercentage + 0.01) <= 1)
       {
+        System.out.println("0.01 Up");
         Constants.shooterPercentage += Constants.shooterIncrement;
+        System.out.println(Constants.shooterPercentage);
       }
     }
     if(mDriveController.dpadDown.wasActivated())
     {
-      if((Constants.shooterPercentage - 0.05) >= 0)
+      if((Constants.shooterPercentage - 0.01) >= 0)
       {
+        System.out.println("0.01 Down");
         Constants.shooterPercentage -= Constants.shooterIncrement;
+        System.out.println(Constants.shooterPercentage);
       }
     }
     if(mDriveController.dpadRight.wasActivated())
     {
-      if((Constants.shooterPercentage + 0.025) <= 1)
+      if((Constants.shooterPercentage + 0.0025) <= 1)
       {
+        System.out.println("0.0025 Up");
         Constants.shooterPercentage += Constants.shooterSmallIncrement;
+        System.out.println(Constants.shooterPercentage);
       }
     }
     if(mDriveController.dpadLeft.wasActivated())
     {
-      if((Constants.shooterPercentage - 0.025) >= 0)
+      if((Constants.shooterPercentage - 0.0025) >= 0)
       {
+        System.out.println("0.0025 Down");
         Constants.shooterPercentage -= Constants.shooterSmallIncrement;
+        System.out.println(Constants.shooterPercentage);
       }
     }
     if(mDriveController.leftBumper.wasActivated())
     {
-      Constants.shooterPercentage = -0.5;
+      System.out.println("Inverse");
+      Constants.shooterPercentage *= -1;
+      System.out.println(Constants.shooterPercentage);
+    }
+    if(mDriveController.rightBumper.wasActivated())
+    {
+      System.out.println(Constants.shooterPercentage);
     }
   }
 
