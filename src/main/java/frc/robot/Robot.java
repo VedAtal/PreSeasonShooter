@@ -176,6 +176,7 @@ public class Robot extends TimedRobot {
       {
         System.out.println("0.01 Up");
         Constants.shooterPercentage += Constants.shooterIncrement;
+        mShooter.shoot();
         System.out.println(Constants.shooterPercentage);
       }
     }
@@ -185,6 +186,7 @@ public class Robot extends TimedRobot {
       {
         System.out.println("0.01 Down");
         Constants.shooterPercentage -= Constants.shooterIncrement;
+        mShooter.shoot();
         System.out.println(Constants.shooterPercentage);
       }
     }
@@ -194,6 +196,7 @@ public class Robot extends TimedRobot {
       {
         System.out.println("0.0025 Up");
         Constants.shooterPercentage += Constants.shooterSmallIncrement;
+        mShooter.shoot();
         System.out.println(Constants.shooterPercentage);
       }
     }
@@ -203,6 +206,7 @@ public class Robot extends TimedRobot {
       {
         System.out.println("0.0025 Down");
         Constants.shooterPercentage -= Constants.shooterSmallIncrement;
+        mShooter.shoot();
         System.out.println(Constants.shooterPercentage);
       }
     }
