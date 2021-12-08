@@ -13,6 +13,7 @@ import frc.robot.loops.Looper;
 import frc.robot.subsystems.Shooter;
 import frc.robot.subsystems.SubsystemManager;
 import frc.robot.subsystems.Superstructure;
+import edu.wpi.first.wpilibj.shuffleboard.*;
 
 
 
@@ -159,6 +160,9 @@ public class Robot extends TimedRobot {
       throw t;
     }
 
+    // Suffleboard
+    Shuffleboard.getTab("Percent Output").add("Motor Percentage", Constants.shooterPercentage);
+    
     //Xbox controller actions
     if(mDriveController.aButton.isBeingPressed())
     {

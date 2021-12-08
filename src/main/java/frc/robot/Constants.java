@@ -17,9 +17,9 @@ public class Constants {
 	public static final double kLooperDt = 0.01;
 
 	// Default speed
-	public static double shooterPercentage = 0.80;
+	public static double shooterPercentage = 0.83;
 
-	public static final double shooterIncrement = 0.05;
+	public static final double shooterIncrement = 0.01;
 
-	public static final double shooterSmallIncrement = 0.025;
+	public static final double shooterSmallIncrement = 0.0025;
 }
